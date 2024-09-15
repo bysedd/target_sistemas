@@ -25,12 +25,12 @@ def calculate_percentage(invoices: list[Fatura]) -> dict[str, float]:
     Returns:
         dict[str, float]: Um dicionário contendo o estado e o percentual de representação.
     """
-    total: float = sum(
+    total = sum(
         invoice["valor"] for invoice in invoices if isinstance(invoice["valor"], float)
     )
     for invoice in invoices:
-        if isinstance(invoice["valor"], float):
-            invoice["percentual"] = (invoice["valor"] / total) * 100
+        assert isinstance(invoice["valor"], float)
+        invoice["percentual"] = (invoice["valor"] / total) * 100
     return {
         invoice["estado"]: invoice["percentual"]
         for invoice in invoices
