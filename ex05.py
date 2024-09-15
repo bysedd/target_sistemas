@@ -35,8 +35,7 @@ def main() -> None:
     Essa função:
     1. Define uma string de várias linhas.
     2. Retira qualquer espaço em branco à esquerda ou à direita da string.
-    3. Imprime a string original.
-    4. Imprime a versão invertida da string usando a função `reverse_string`.
+    3. Imprime a versão invertida da string usando a função `reverse_string`.
     """
     string = dedent("""
     Códigos escrevo sem parar,
