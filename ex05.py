@@ -1,26 +1,20 @@
-"""
-5) Escreva um programa que inverta os caracteres de um string.
-
-IMPORTANTE:
-a) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;
-b) Evite usar funções prontas, como, por exemplo, reverse;
-"""
-
+import logging
 from collections import deque
 from textwrap import dedent
 
+logging.basicConfig(level=logging.INFO, format="%(message)s")
+
 
 def reverse_string(original_string: str) -> str:
-    """
-    Inverte os caracteres de uma string.
+    """Inverte os caracteres de uma string.
 
     Args:
         original_string (str): A string a ser invertida.
 
     Returns:
         str: A string invertida.
+
     """
-    # return original_string[::-1]  # Alternativa mais simples.
     reversed_chars: deque[str] = deque()
     for i in range(len(original_string)):
         reversed_chars.appendleft(original_string[i])
@@ -29,8 +23,7 @@ def reverse_string(original_string: str) -> str:
 
 
 def main() -> None:
-    """
-    Função principal que demonstra a inversão de uma determinada cadeia de caracteres.
+    """Inverte de uma determinada cadeia de caracteres.
 
     Essa função:
     1. Define uma string de várias linhas.
@@ -43,7 +36,7 @@ def main() -> None:
     Se me aprovarem, vou comemorar,
     Um dev na Target? Que lugar pra brilhar!
     """)
-    print(f"String invertida: {reverse_string(string)}")
+    logging.info("String invertida: %s", reverse_string(string))
 
 
 if __name__ == "__main__":
