@@ -1,8 +1,3 @@
-Aqui está o Markdown aprimorado com os enunciados dos exercícios organizados de forma clara e estruturada para o seu
-repositório no GitHub:
-
----
-
 # Target Sistemas
 
 Este repositório contém uma série de exercícios em Python desenvolvidos como parte de um processo seletivo para a Target
@@ -15,7 +10,6 @@ Sistemas.
 - [Exercício 3](#exercício-3)
 - [Exercício 4](#exercício-4)
 - [Exercício 5](#exercício-5)
-- [Requisitos e Configuração](#requisitos-e-configuração)
 
 ## Exercícios e Saídas
 
@@ -122,51 +116,3 @@ Escreva um programa que inverta os caracteres de um string.
 Arquivo: [`ex05.py`](ex05.py)  
 Saída:  
 ![Saída do Ex05](output/ex05.png)
-
-## Requisitos e Configuração
-
-Para executar os arquivos deste repositório, é necessário ter os seguintes requisitos instalados:
-
-- Python 3.12+
-- [Poetry](https://python-poetry.org/) para gerenciamento de dependências
-
-### Instalação de Dependências
-
-Certifique-se de que o `Poetry` esteja instalado em seu ambiente. Para instalar o `Poetry`, siga as instruções
-em [python-poetry.org](https://python-poetry.org/docs/#installation).
-
-Depois de instalar o `Poetry`, siga as etapas abaixo:
-
-1. Clone o repositório para o seu ambiente local:
-
-   ```bash
-   git clone https://github.com/bysedd/target-sistemas.git
-   cd target-sistemas
-   ```
-
-2. Instale as dependências usando o `Poetry`:
-
-   ```bash
-   poetry install
-   ```
-
-   Isso instalará todas as dependências listadas nos grupos `[tool.poetry.dependencies]` e
-   `[tool.poetry.group.dev.dependencies]` do arquivo `pyproject.toml`.
-
-3. Para executar qualquer um dos scripts, utilize o comando:
-
-   ```bash
-   poetry run python nome_do_arquivo.py
-   ```
-
-### Configuração de Ambiente
-
-- Este projeto usa o `mypy` para verificação de tipos e o `ruff` para linting. As configurações estão definidas no
-  arquivo `pyproject.toml`:
-
-   ```toml
-   [tool.mypy]
-   python_version = "3.12"
-   strict = true
-   ignore_missing_imports = true
-   ```
